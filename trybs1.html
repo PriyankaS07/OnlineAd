@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><link href="new2.css" type="text/css "rel="stylesheet">
+<link href="style.css" type="text/css" rel="stylesheet">
+<link href="newedit.css" type="text/css" rel="stylesheet">
+
+
+  <title>Bootstrap Navigation Bar</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<script type="text/javascript">
+
+ function submit()
+ {
+	 var user = document.getElementById("uid").value;
+	 var pas = document.getElementById("pass").value;
+	
+        var atpos = user.indexOf("@");
+        var dotpos = user.lastIndexOf(".");
+        if (atpos<1 || dotpos<atpos+2 || dotpos+2>=user.length || user == "") {
+       	 alert("Not a valid username");
+        }
+		else if(pas == ""){
+			alert("Please enter the password field...");
+		}
+	
+	if (user == "user" && pas == "password")
+	{
+	 alert("Succesful log in");
+	}
+	
+	 
+ }
+ function sign()
+ {
+	var user1 = document.getElementById("uid1").value;
+	 var pas1 = document.getElementById("pass1").value;
+	 var pas2 = document.getElementById("pass2").value;
+	
+        var atpos1 = user1.indexOf("@");
+        var dotpos1 = user1.lastIndexOf(".");
+		 if(user1 == "" ||pas1 == "" || pas2 == "")
+	{
+		alert("Fields are empty");
+	}
+        
+		else if(pas1 == "" || pas2 == ""){
+			alert("Please enter the password fields...");
+		}
+	
+	else if (pas1 != pas2)
+	{
+	 alert("Your passwords don't match");
+	}
+	else if (atpos1<1 || dotpos1<atpos1+2 || dotpos1+2>=user1.length || user1 == "") {
+       	 alert("Not a valid email id");
+        }
+		else if(pas1 == pas2){
+			
+		}
+}
+ 
+ 
+</script>
+
+<body>
+<div id="popup1" class="overlay" >
+	<div class="popup" style= "background-color:#f7f9f9">
+		<h2>Log In!</h2>
+		<a class="close" href="#">&nbsp;</a>
+		<div class="content">
+		 <b>Email Id : <b><input type="text" id = "uid" ><br><br>
+			<b>Password : <b><input type="password" id = "pass"><br><br>
+				
+			 <button type="button"  class="btn btn-success" value="Submit" onclick = "submit()">Log In </button>
+			 <a href="#"  class="forgot-password">Forgot Password?</a>
+		</div>
+	</div>
+</div>
+<div id="popup2" class="overlay" >
+	<div class="popup" style= "background-color:#f7f9f9">
+		<h2>Sign Up!</h2>
+		<a class="close" href="#">&nbsp;</a>
+		<div class="content">
+		 <b>Email Id : <b><input type="text" id = "uid1" required><br><br>
+			<b>Password : <b><input type="password" id = "pass1" required><br><br>
+			<b>Re-Enter Password : <b><input type="password" id = "pass2" required><br><br>
+				
+			 <label><input type="checkbox"> Remember me</label>  <button type="button"  class="btn btn-success" value="Sign Up" onclick = "sign()">Sign Up</button> 
+			 <!--<a href="#"  class="forgot-password">Forgot Password?</a><-->
+		</div>
+	</div>
+</div>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"><img src="monster.png" height="50" width = "100"></a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Events <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Promotions</a></li>
+          <li><a href="#">Screening</a></li>
+          <li><a href="#">Charity</a></li>
+		  <li><a href="#">Action</a></li>
+        </ul>
+      </li>
+	  <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Show timings <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Morning</a></li>
+          <li><a href="#">Afternoon</a></li>
+          <li><a href="#">Evening</a></li>
+		  <li><a href="#">Midnight</a></li>
+        </ul>
+      </li>
+	  <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Watchlist <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+		  <li><a href="#">4</a></li>
+        </ul>
+      </li>
+	  <li>
+      
+				<form class="navbar-form" role="search">
+					<div class="input-group">
+						<input type="text" class="form-control" placeholder="Search">
+						<span class="input-group-btn">
+							<button type="reset" class="btn btn-default">
+								<span class="glyphicon glyphicon-remove">
+									<span class="sr-only">Close</span>
+								</span>
+							</button>
+							<button type="submit" class="btn btn-default">
+								<span class="glyphicon glyphicon-search">
+									<span class="sr-only">Search</span>
+								</span>
+							</button>
+						</span>
+					</div>
+				</form>
+			
+		
+		</li>
+	
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#popup2"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="#popup1"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
+</body>
+</html>
+

@@ -1,0 +1,277 @@
+header{
+	background-color:#e60000;
+	color:white;
+	display: flex;
+	justify-content: space-between;	
+}
+
+#imglogo{
+	margin-left:15px;
+	
+}
+
+#logo-div{
+	font-family:helvetica;
+	font-size: 25;
+	/*border:1px solid black;*/
+	
+}
+
+#header-left-div{
+	/*border:1px solid black;*/
+	width:25%;
+}
+
+#header-right-div{
+	/*border:1px solid black;*/
+	text-align:center;
+}
+#header-mid-div{
+	/*border:1px solid black;*/
+	width:50%;
+	margin-top:50px;
+	text-align:center;
+	
+}
+input[type=text]{
+	padding:7px;
+	width:70%;
+}
+#login-input{
+	padding:7px;
+	width:70%;
+}
+#maindivision
+{
+	margin-left: 20px;
+	margin-right: 20px;
+	/*border: 1px solid black;*/
+	overflow: auto;
+}
+#footer1{
+	position: auto;
+	background-color:#e60000;
+	color:white;
+}
+#cart_button{
+	background-color:#e60000;
+	color:white;
+	width:100;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+	height:34;
+	border:0;
+	padding:10px;
+}
+#cart_button:hover{
+	background-color:black;
+}
+.dropbtn {
+	
+    background-color: #e60000;
+    color: white;
+    padding: 10px;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+	 text-decoration: none;
+	 width:100;
+	text-align:center;
+	height:34;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: gray}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: black;
+}
+#search_button{
+	background-color:black;
+	color:white;
+	width:100;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+	height:34;
+	border:0;
+	padding:7px;
+}
+#popup-login-button{
+	background-color:black;
+	color:white;
+	width:100;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+	height:34;
+	border:0;
+	padding:7px;
+}
+
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background:white;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+  color: black;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: "black";
+
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}
+
+
+
+
+[class*='close-'] {
+  color: transparent;
+  font: 14px/100% arial, sans-serif;
+  position: absolute;
+  right: 5px;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #fff;
+  top: 5px;
+}
+
+
+.close-thin:after {
+  content: '×';
+  color:black;
+}
+
+
+.dialog {
+  background: transparent;
+  padding-left:23em;
+  height: 20px;
+  position: relative;
+  width: 20px;
+  
+}
+.container {
+  width: 576px; margin: 0 auto;
+}
+
+.container:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+
+/*test....*/
+
+.popup_register {
+  margin: 70px auto;
+  padding: 20px;
+  background:white;
+  border-radius: 5px;
+  width: 30%;
+  height:70%;
+  position: relative;
+  transition: all 5s ease-in-out;
+  color: black;
+}
+
+.popup_register h2 {
+  margin-top: 0;
+  color: "black";
+
+}
+.popup_register .close {
+ position:absolute;
+ right:-25px; 
+ top:-25px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup_register .close:hover {
+  color: #06D85F;
+}
+.popup_register .content {
+  max-height: 30%;
+  text-align:right;
+
+}
+#register-input{
+	padding:7px;
+	width:70%;
+}
